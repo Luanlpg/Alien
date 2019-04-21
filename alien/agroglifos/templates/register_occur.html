@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
+    <title>Alien - Agroglifos</title>
+    <link rel="shortcut icon" href="/../static/img/alien.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+      body {
+        background-color:black
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light navbar-expand-lg" style="background-color: green;">
+        <a class="navbar-brand" href="/home/">
+          <img src="/../static/img/alien.png" width="50" height="60" id="alien">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="/register_occur/">Cadastrar Ocorrencia<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/list_occurrences/">Listar Ocorrencias</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/summary/">Sumário</a>
+            </li>
+
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/login/">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <center>
+        <h1 class="text-success">
+          Cadastre Ocorrência de Agroglifo
+        </h1>
+      </center>
+      <br>
+      <br>
+      <form action="/register_occur/" method="POST" class="text-success">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="col-7">
+            <label>Cidade</label>
+            <input type="text" name="cidade" class="form-control" placeholder="Cidade">
+          </div>
+          <div class="form-group col">
+                <label for="state">Estado</label>
+                <select name="estado" id="inputState" class="form-control">
+                  <option selected>Estado</option>
+                  <option>AC</option>
+                  <option>AL</option>
+                  <option>AP</option>
+                  <option>AM</option>
+                  <option>BA</option>
+                  <option>CE</option>
+                  <option>DF</option>
+                  <option>ES</option>
+                  <option>GO</option>
+                  <option>MA</option>
+                  <option>MT</option>
+                  <option>MS</option>
+                  <option>MG</option>
+                  <option>PA</option>
+                  <option>PB</option>
+                  <option>PR</option>
+                  <option>PE</option>
+                  <option>PI</option>
+                  <option>RJ</option>
+                  <option>RN</option>
+                  <option>RS</option>
+                  <option>RO</option>
+                  <option>RR</option>
+                  <option>SC</option>
+                  <option>SP</option>
+                  <option>SE</option>
+                  <option>TO</option>
+                </select>
+              </div>
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" name="data" max="3000-12-31"
+                  min="1000-01-01" class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Descrição do Ocorrido</label>
+            <textarea name="descricao" class="form-control" rows="3"></textarea>
+        </div>
+        <br>
+        <center class="text-success">
+          <h5>{{ erro }}</h5>
+        </center>
+        <center>
+          <input type='submit' class="btn btn-success" value='Cadastrar'/>
+        </center>
+      </form>
+    </div>
+    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
