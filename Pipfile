@@ -6,9 +6,17 @@ verify_ssl = true
 
 [packages]
 
+dj-database-url = "*"
 Django = "*"
 django-crispy-forms = "*"
+django-heroku = "*"
+gunicorn = "*"
+psycopg2 = "*"
+pytz = "*"
+sqlparse = "*"
+whitenoise = "*"
+
 
 [requires]
 
-python_version = "3.6"
+python_version = "3.6.4"

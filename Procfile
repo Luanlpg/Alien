@@ -1,1 +1,2 @@
-web: python alien/manage.py runserver
+release: python manage.py migrate
+web: gunicorn alien.wsgi
