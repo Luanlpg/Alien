@@ -1,2 +1,2 @@
-release: python manage.py migrate
-web: python manage.py runserver
+release: python alien/manage.py migrate
+web: python alien/manage.py runserver
