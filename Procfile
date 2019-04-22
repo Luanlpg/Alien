@@ -1,1 +1,1 @@
-web: gunicorn alien/manage.py runserver
+web: python alien/manage.py runserver
