@@ -13,8 +13,6 @@ Alien - Agroglifos. As grandes e misteriosas figuras que surgem literalmente da 
 
 ## Rodando o server
 
-- Acesse o prijeto django com: `cd alien
-
 - Rode as migrações do projeto: `python manage.py migrate`
 
 - Rode o servidor local com: `python manage.py runserver`
@@ -22,5 +20,7 @@ Alien - Agroglifos. As grandes e misteriosas figuras que surgem literalmente da 
 ## Navegando pelo site
 
 - Faça um usuário e login com o seu usuário em: `localhost:8000/`
+
+- Ou Acesse o projeto online: https://alien-agroglifos.herokuapp.com/
 
 - Navegue avonts...
