@@ -5,7 +5,7 @@ class Agroglifos(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     date = models.DateField()
-    description = models.CharField(max_length=900, default='N/D')
+    description = models.CharField(max_length=2000, default='N/D')
     uuid = models.CharField(default='-- -- --', max_length=300)
     url = models.URLField(default='-- -- --', max_length=300)
 
