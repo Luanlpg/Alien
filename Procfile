@@ -1,1 +1,1 @@
-web: gunicorn alien.wsgi --log-file-
+web: gunicorn alien.wsgi
